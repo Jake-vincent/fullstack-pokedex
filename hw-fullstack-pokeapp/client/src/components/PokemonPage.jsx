@@ -12,8 +12,7 @@ const PokemonPage = () => {
 
   const loadPokemons = async () => {
     try {
-      const result = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/pokemons/?offset=${offset}&limit=20`,
-      {
+      const result = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/pokemons/?offset=${offset}&limit=20`,{
         method: 'GET'
       });
       const response = await result.json();
@@ -31,7 +30,7 @@ const PokemonPage = () => {
 
   return (
     <div>
-  <h1>POKEDEX</h1>
+      <h1>POKEDEX</h1>
       <div className="pokemonList">
         {!pokemonArr ? null : pokemonArr.map((pokemon, index) => (
           <PokemonList key={index} pokemon={pokemon}  />

@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router } from 'express';
 import { 
   getPokemon, 
   getPokemonName, 
@@ -6,14 +6,14 @@ import {
   addPokemon,
   updatePokemon,
   deletePokemon
- } from "../controllers/pokemonControllers.js";
+ } from '../controllers/pokemonController.js';
 
 const router = Router();
 
-router.route("/").get(getPokemon);
-router.route("/search").get(getQueryPokemon);
-router.route("/:name").get(getPokemonName)
-router.route("/").post(addPokemon)
+router.route('/').get(getPokemon);
+router.route('/search').get(getQueryPokemon);
+router.route('/:name').get(getPokemonName)
+router.route('/').post(addPokemon)
 router.route('/:id').put(updatePokemon);
 router.route('/:id').delete(deletePokemon);
 

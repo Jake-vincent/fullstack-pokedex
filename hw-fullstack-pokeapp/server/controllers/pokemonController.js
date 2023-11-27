@@ -1,4 +1,4 @@
-import Pokemon from "../models/pokemonModel.js";
+import Pokemon from '../models/pokemonModel.js';
 
 const getPokemon = async (request, response) => {
   try {
@@ -6,7 +6,7 @@ const getPokemon = async (request, response) => {
     if(requestUrl.length === 1) {
       const pokemons = await Pokemon.find();
       response.status(200).send({
-        message: "List of all Pokemons",
+        message: 'List of all Pokemons',
         count: pokemons.length,
         data: {
          pokemons: pokemons
@@ -107,7 +107,7 @@ const addPokemon = async ( req, res) => {
    
     if (pokemonExist) {
       res.status(400).send({
-        message: "Pokemon already exists.",
+        message: 'Pokemon already exists.',
       });
     } else {
       const newPokemon = new Pokemon({

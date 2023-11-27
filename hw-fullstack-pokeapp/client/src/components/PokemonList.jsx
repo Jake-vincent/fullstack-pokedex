@@ -1,7 +1,6 @@
 import '../App.css'
 
 const PokemonList = ({ pokemon}) => {
-  
   return (
     <div className="pokemon">
       {pokemon.map((pokemonItem) => (
@@ -11,7 +10,6 @@ const PokemonList = ({ pokemon}) => {
         <p>Types: {pokemonItem.type.join(', ')}</p>
       </div>
       ))}
-
     </div>
   );
 }
